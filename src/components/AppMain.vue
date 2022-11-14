@@ -24,8 +24,8 @@ export default {
         <div class="container p-2">
             <AppBanner />
         </div>
-        <div class="my-container bg-dark">
-            <div class="row">
+        <div class="my-container">
+            <div class="row row-cols-5">
                 <CharacterItem :character="character" v-for="character in store.characters" />
             </div>
         </div>

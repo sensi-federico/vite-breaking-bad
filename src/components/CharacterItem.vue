@@ -9,16 +9,29 @@ export default {
 </script>
 
 <template>
-    <div class="col">
-        <div class="character">
-            <img :src="character.image" :alt="character.name">
-            <h3>{{ character.name }}</h3>
-            <div class="series">{{ character.series }}</div>
-            <div class="status">{{ character.status }}</div>
+    <div class="col g-3">
+        <div class="card bg-dark p-2">
+            <img :src="character.img" :alt="character.name">
+            <h5 class="text-white text-center pt-3">{{ character.name }}</h5>
+            <div class="series text-muted">{{ character.category }}</div>
+            <div class="status text-muted">{{ character.status }}</div>
         </div>
     </div>
 </template>
 
-<style>
+<style lang="scss">
+.card {
 
+    height: 450px;
+
+    img {
+        width: 200px;
+        height: 250px;
+    }
+
+    div {
+        text-align: center;
+        padding: .5rem;
+    }
+}
 </style>
