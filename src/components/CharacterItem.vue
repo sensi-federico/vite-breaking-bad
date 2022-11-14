@@ -20,18 +20,5 @@ export default {
 </template>
 
 <style lang="scss">
-.card {
 
-    height: 450px;
-
-    img {
-        width: 200px;
-        height: 250px;
-    }
-
-    div {
-        text-align: center;
-        padding: .5rem;
-    }
-}
 </style>

@@ -1,13 +1,15 @@
 <script>
 import AppBanner from './AppBanner.vue'
 import CharacterItem from './CharacterItem.vue'
+import LoadingPage from './LoadingPage.vue'
 import { store } from '../store.js'
 
 export default {
     name: 'AppMain',
     components: {
         AppBanner,
-        CharacterItem
+        CharacterItem,
+        LoadingPage
     },
     data() {
         return {
@@ -26,7 +28,9 @@ export default {
         </div>
         <div class="my-container">
             <div class="row row-cols-5">
-                <CharacterItem :character="character" v-for="character in store.characters" />
+                <CharacterItem :character="character" v-for="character in store.characters"
+                    v-if=" store.charsLength == 62" />
+                <LoadingPage v-else />
             </div>
         </div>
     </div>
