@@ -53,8 +53,9 @@ export default {
         <div class="my-container p-2">
             <CategorySelector @selector='selector' />
             <div class="row row-cols-5">
-                <CharacterItem :character="character" v-for="character in store.characters" />
-                <!-- <LoadingPage v-else /> -->
+                <CharacterItem :character="character" v-for="character in store.characters"
+                    v-if="store.charsLength == 62" />
+                <LoadingPage v-else />
             </div>
         </div>
     </div>
