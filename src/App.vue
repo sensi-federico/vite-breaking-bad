@@ -18,7 +18,8 @@ export default {
   },
   methods: {
     callApi(url) {
-      axios.get(url)
+      axios
+        .get(url)
         .then(response => {
           console.log(response)
           this.store.characters = response.data
