@@ -54,7 +54,7 @@ export default {
             <CategorySelector @selector='selector' />
             <div class="row row-cols-5">
                 <CharacterItem :character="character" v-for="character in store.characters"
-                    v-if="store.charsLength == 62" />
+                    v-if="store.charsLength == 62 || store.charsLength == 12 || store.charsLength == 57" />
                 <LoadingPage v-else />
             </div>
         </div>
