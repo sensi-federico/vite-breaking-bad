@@ -34,6 +34,7 @@ export default {
                     console.log(response)
                     this.store.characters = response.data
                     this.store.charsLength = response.data.length
+                    this.store.loading = false
                 })
                 .catch(err => {
                     console.log(err.message);
@@ -54,7 +55,7 @@ export default {
             <CategorySelector @selector='selector' />
             <div class="row row-cols-5">
                 <CharacterItem :character="character" v-for="character in store.characters"
-                    v-if="store.charsLength == 62 || store.charsLength == 12 || store.charsLength == 57" />
+                    v-if="store.loading == false" />
                 <LoadingPage v-else />
             </div>
         </div>

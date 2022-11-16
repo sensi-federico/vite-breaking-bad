@@ -28,4 +28,4 @@ export default {
 select {
     max-width: 200px;
 }
-</style>
+</style> 

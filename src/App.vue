@@ -24,6 +24,7 @@ export default {
           console.log(response)
           this.store.characters = response.data
           this.store.charsLength = response.data.length
+          this.store.loading = false
         })
         .catch(err => {
           console.error(err.message)

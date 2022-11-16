@@ -7,5 +7,6 @@ export const store = reactive({
     characters: null,
     charsLength: null,
     categorySelector: 'all',
-    error: null
+    error: null,
+    loading: true
 })
